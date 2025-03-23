@@ -13,7 +13,7 @@ function AddStudnet() {
 
     const handleSaveData = (e) => {
         e.preventDefault()
-        axios.post("http://localhost:1000/create/student", {
+        axios.post("https://school-backend-1-zds2.onrender.com/create/student", {
             "name": name,
             "address": address,
             "phone": phone,

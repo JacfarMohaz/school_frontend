@@ -7,13 +7,13 @@ const DisplayStudents = () => {
     const [date, setData] = useState([])
 
     const handleGetData = () => {
-        axios.get("http://localhost:1000/read/student").then((res) => {
+        axios.get("https://school-backend-1-zds2.onrender.com/read/student").then((res) => {
             setData(res.data)
         }).catch((error) => console.log(error))
     }
 
     const handleRomoveData = (id) => {
-        axios.delete(`http://localhost:1000/delete/student/${id}`).then(() => {
+        axios.delete(`https://school-backend-1-zds2.onrender.com/student/${id}`).then(() => {
             alert("success deleted")
             handleGetData()
         }).catch((error) => console.log(error))
